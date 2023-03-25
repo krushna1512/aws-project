@@ -1,0 +1,42 @@
+******************************AWS Project******************************
+1. Security Groups LB
+- HTTP - anywhere from 
+- HTTPS
+
+2. Security Group for Tomcat
+- 8080 -> Security grp of LB
+- 22
+
+3. SG for backend
+- 3306(MYSQL)->  tomcatsg
+- 11211(Memcached)-> tomcatsg  
+- 5672(RabbitMQ) - > tomcatsg
+- all trafic -> own security grp
+- allow port 22 
+
+4. Login key pair
+
+5. Create EC2 instance
+- Create insatace for mysql (t2.micro)
+  mysql -u root -p
+- Create instance for memcached (t2.micro)
+     sudo su
+  1  nano memcached.sh
+  2  chmod +x memcached.sh 
+  3  ./memcached.sh
+
+- Create instance for rabbitmq (t2.micro)(Red Hat)
+  yum install nano -y   
+
+6. Note down the private ips of the insatnces
+
+7. Make entry in Route53
+   mysql 172.31.88.25
+   rb   172.31.85.18
+   ms   172.31.87.220
+
+8. Add record name in appication.property file   
+
+9. Create tomcat instance(Ubuntu 18) -> tomcatsg
+
+10. Download and Install JAVA and Maven in local system and set the path
