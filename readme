@@ -40,3 +40,24 @@
 9. Create tomcat instance(Ubuntu 18) -> tomcatsg
 
 10. Download and Install JAVA and Maven in local system and set the path
+ - open powershell and install chocolaty
+    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+  - push code in github
+  - pull the code in Tomcat Server
+  - stop tomcat service "service tomcat8 stop"
+  - delete root directory from this path /var/lib/tomcat8/webapps
+  - Paste the artifact from /root/aws-project/target to "/var/lib/tomcat8/webapps" this location
+  - Start tomcat 'service tomcat8 start'
+
+11. Create Load Balancer
+
+  - create target group
+  - add port 8080
+  - Health check path /login
+  - Advanced > Override port 8080
+  - select tomcat server
+  - create load balancer
+  - select internet facing
+  - select all Mapping zones
+  - copy dns name with /vprofile-v2
