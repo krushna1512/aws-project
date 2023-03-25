@@ -60,4 +60,23 @@
   - create load balancer
   - select internet facing
   - select all Mapping zones
-  - copy dns name with /vprofile-v2
+  - copy dns name with /aws-v2
+
+12. Create auto scaling group
+
+  - create image of tomcat server
+  A. go to launch configuration
+  - select ami
+  - instance type
+  - enable cloud watch
+  - select tomcat security grp
+  - select key
+  B. Go to Autoscaling grp
+  - enter the name and select launch congiguration
+  - select vpc and all subnets
+  - enable load balancing and select target grp 
+  - check mark on health check on ELB
+  - select capacity Desired -1 , Min 2, Max 2 
+  - select tracking scaling policy
+  - select average CPU utilization to 70%
+  - finally we can add notification for Autoscaling operations
