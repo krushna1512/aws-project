@@ -44,6 +44,9 @@
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
   - push code in github
+    choco install jdk8
+    choco install maven
+    mvn clean install
   - pull the code in Tomcat Server
   - stop tomcat service "service tomcat8 stop"
   - delete root directory from this path /var/lib/tomcat8/webapps
