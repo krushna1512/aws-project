@@ -31,13 +31,13 @@
 6. Note down the private ips of the insatnces
 
 7. Make entry in Route53
-   mysql 172.31.88.25
-   rb   172.31.85.18
-   ms   172.31.87.220
+   mysql 172.31.12.143
+   rb   172.31.10.231
+   ms   172.31.4.184
 
 8. Add record name in appication.property file   
 
-9. Create tomcat instance(Ubuntu 18) -> tomcatsg
+9. Create tomcat instance(Ubuntu 22) -> tomcatsg
 
 10. Download and Install JAVA and Maven in local system and set the path
  - open powershell and install chocolaty
@@ -49,8 +49,8 @@
     mvn clean install
   - pull the code in Tomcat Server
   - stop tomcat service "service tomcat8 stop"
-  - delete root directory from this path /var/lib/tomcat8/webapps
-  - Paste the artifact from /root/aws-project/target to "/var/lib/tomcat8/webapps" this location
+  - delete root directory from this path /opt/tomcat/webapps
+  - Paste the artifact from /root/aws-project/target to "/opt/tomcat/webapps" this location
   - Start tomcat 'service tomcat8 start'
 
 11. Create Load Balancer
@@ -83,3 +83,9 @@
   - select tracking scaling policy
   - select average CPU utilization to 70%
   - finally we can add notification for Autoscaling operations
+
+
+
+
+http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.23/bin/apache-tomcat-8.0.23.tar.gz
+

@@ -1,6 +1,8 @@
 yum install nano -y
 sudo update-crypto-policies --set LEGACY
 sudo reboot
+
+#!/bin/bash
 sudo dnf -y install wget
 wget https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh -O rabbitmq_script.rpm.sh
 chmod +x  rabbitmq_script.rpm.sh
