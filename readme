@@ -31,7 +31,7 @@
 6. Note down the private ips of the insatnces
 
 7. Make entry in Route53
-   mysql 172.31.12.143
+   mysql 172.31.14.216
    rb   172.31.10.231
    ms   172.31.4.184
 
