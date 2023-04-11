@@ -1,4 +1,11 @@
 ******************************AWS Project******************************
+Pre-req. in Laptop
+1. Vs code
+2. Git
+3. Maven
+4. JDK 8
+5. Terminus
+
 1. Security Groups LB
 - HTTP - anywhere from 
 - HTTPS
@@ -16,28 +23,32 @@
 
 4. Login key pair
 
-5. Create EC2 instance
+User names - for Red hat instance - ec2-user
+             for ubuntu - ubuntu
+
+5. Create EC2 instance (Add Backend Security Group)
+- (install mysql from mysql script)(redhat 9)
 - Create insatace for mysql (t2.micro)
   mysql -u root -p
-- Create instance for memcached (t2.micro)
+- Create instance for memcached (t2.micro)(Install it from memcacheds)
      sudo su
   1  nano memcached.sh
   2  chmod +x memcached.sh 
   3  ./memcached.sh
 
-- Create instance for rabbitmq (t2.micro)(Red Hat)
+- Create instance for rabbitmq (t2.micro)(Red Hat)(Install it from Script)
   yum install nano -y   
 
 6. Note down the private ips of the insatnces
 
 7. Make entry in Route53
-   mysql 172.31.14.216
-   rb   172.31.10.231
-   ms   172.31.4.184
+   s01 172.31.14.216s
+   r01   172.31.10.231
+   m01   172.31.4.184
 
 8. Add record name in appication.property file   
 
-9. Create tomcat instance(Ubuntu 22) -> tomcatsg
+9. Create tomcat instance(Ubuntu 20s) -> tomcatsg  ()
 
 10. Download and Install JAVA and Maven in local system and set the path
  - open powershell and install chocolaty
