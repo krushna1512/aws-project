@@ -4,7 +4,7 @@
     4  sudo groupadd tomcat
     5  sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
     6  cd /tmp
-    7  curl -O https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.87/bin/apache-tomcat-8.5.87.tar.gz
+    7  curl -O http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.23/bin/apache-tomcat-8.0.23.tar.gz   
     8  sudo mkdir /opt/tomcat
     9  sudo tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
    10  cd /opt/tomcat

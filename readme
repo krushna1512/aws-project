@@ -51,7 +51,7 @@ User names - for Red hat instance - ec2-user
 9. Create tomcat instance(Ubuntu 20s) -> tomcatsg  ()
 
 10. Download and Install JAVA and Maven in local system and set the path
- - open powershell and install chocolaty
+ - open powershell and install chocolaty(Copy paste below three lines in powershell)
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
   - push code in github
